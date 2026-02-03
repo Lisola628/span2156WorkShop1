@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0075)file:///Users/liliana/Downloads/VT_Workshop1_Audio_Production_SPAN2156.html -->
+<!-- saved from url=(0081)file:///Users/liliana/Downloads/VT_Workshop1_Audio_Production_SPAN2156%20(2).html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V-T Workshop 1: Audio Production &amp; Podcast Editing | SPAN 2156</title>
-    <link href="./index_files/css2" rel="stylesheet">
+    <link href="./V-T Workshop 1_ Audio Production &amp; Podcast Editing _ SPAN 2156_files/css2" rel="stylesheet">
     <style>
         :root {
             --forest: #1a3a2a;
@@ -371,6 +371,10 @@
             margin: 12px 0;
         }
 
+        .two-col[style*="1fr 1fr 1fr"] {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .col-box {
             background: var(--warm);
             border-radius: 10px;
@@ -400,6 +404,7 @@
             .obj-grid { grid-template-columns: 1fr; }
             .phase { padding: 22px; }
             .two-col { grid-template-columns: 1fr; }
+            .two-col[style*="1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
             .container { padding: 25px 15px 50px; }
         }
     </style>
@@ -435,32 +440,330 @@
 <div class="container">
 
     <!-- ═══════════════════════════════════════════ -->
+    <!-- INTRO: MICROPHONES & EQUIPMENT (Ch. 3) -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase" style="border-top-color: #7b5ea7;">
+        <div class="phase-header">
+            <div class="phase-number">🔊</div>
+            <div class="phase-title-group">
+                <h3>Conoce tu equipo: Micrófonos, filtros y patrones de captura</h3>
+                <div class="time">📖 Basado en el <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-3-microphones-recorders-filters/" target="_blank" style="color: var(--sage);">Capítulo 3 – Tools for Podcasting</a></div>
+            </div>
+        </div>
+
+        <p>Antes de grabar, es importante entender los tipos de micrófonos que vamos a usar en el laboratorio y cómo capturan el sonido. Esto te ayudará a obtener la mejor calidad de audio posible para tu podcast.</p>
+
+        <!-- Mic Types -->
+        <div class="activity">
+            <div class="activity-label">🎤 Tipos de micrófonos</div>
+            <h4>Los tres estilos principales</h4>
+            <div class="two-col" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="col-box">
+                    <h5>🖐️ De mano (Handheld)</h5>
+                    <ul>
+                        <li>El micrófono clásico de reportero</li>
+                        <li>Portátil y versátil</li>
+                        <li>Ideal para entrevistas</li>
+                        <li>Ej: Shure SM58</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>🗄️ De pie / escritorio (Stand)</h5>
+                    <ul>
+                        <li>Se coloca en la mesa o brazo articulado</li>
+                        <li>Manos libres para leer guiones</li>
+                        <li>Ideal para grabación en estudio</li>
+                        <li>Ej: Blue Yeti, FIFINE</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>👔 Lavalier / solapa</h5>
+                    <ul>
+                        <li>Pequeño, se engancha a la ropa</li>
+                        <li>Capta sonido directo de la voz</li>
+                        <li>Patrón omnidireccional (capta todo)</li>
+                        <li>Ej: BOYA, RODE Wireless</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pickup Patterns -->
+        <div class="activity">
+            <div class="activity-label">📡 Patrones de captura (Pickup Patterns)</div>
+            <h4>¿Cómo "escucha" tu micrófono?</h4>
+            <p>Cada micrófono tiene un patrón invisible que determina de dónde captura el sonido. No se ve por fuera — es una característica interna. Conocer el patrón te ayuda a posicionarte correctamente.</p>
+
+            <table class="vocab-table">
+                <tbody><tr>
+                    <th>Patrón</th>
+                    <th>Forma</th>
+                    <th>Capta sonido de...</th>
+                    <th>Ideal para...</th>
+                </tr>
+                <tr>
+                    <td><strong>🫀 Cardioide</strong></td>
+                    <td>Forma de corazón</td>
+                    <td>Principalmente el <strong>frente</strong> del micrófono</td>
+                    <td>Grabación individual, narración de podcast</td>
+                </tr>
+                <tr>
+                    <td><strong>↔️ Bidireccional</strong></td>
+                    <td>Figura de 8</td>
+                    <td><strong>Frente y atrás</strong>, rechaza los lados</td>
+                    <td>Entrevistas cara a cara (2 personas)</td>
+                </tr>
+                <tr>
+                    <td><strong>🔵 Omnidireccional</strong></td>
+                    <td>Esfera</td>
+                    <td><strong>Todas las direcciones</strong> por igual</td>
+                    <td>Ambiente, pero <em>no ideal</em> para podcasts</td>
+                </tr>
+            </tbody></table>
+
+            <div class="tip">
+                <strong>💡 En el laboratorio:</strong> Los micrófonos del lab probablemente usan el patrón <strong>cardioide</strong>. Esto significa que debes hablar <strong>hacia el frente del micrófono</strong>, no hacia los lados ni por detrás. ¡Asegúrate de no hablar por el lado equivocado!
+            </div>
+        </div>
+
+        <!-- Pop Filters & Accessories -->
+        <div class="activity">
+            <div class="activity-label">🛡️ Accesorios esenciales</div>
+            <h4>Filtros anti-pop, soportes y auriculares</h4>
+            <div class="two-col">
+                <div class="col-box">
+                    <h5>🔘 Filtro anti-pop (Pop Filter)</h5>
+                    <ul>
+                        <li>Tela o malla de metal entre tu boca y el mic</li>
+                        <li>Rompe las ráfagas de aire de las plosivas (P, B, T)</li>
+                        <li>Los de nylon son más baratos y efectivos</li>
+                        <li>Los de metal duran más y se limpian fácilmente</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>🎧 Auriculares de monitoreo</h5>
+                    <ul>
+                        <li><strong>Siempre</strong> usa auriculares al grabar</li>
+                        <li>Te permiten escuchar tu propia voz en tiempo real</li>
+                        <li>Detectas problemas de audio inmediatamente</li>
+                        <li>Nunca uses los parlantes del computador para monitorear</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="two-col">
+                <div class="col-box">
+                    <h5>🔧 Soporte antivibración (Shock Mount)</h5>
+                    <ul>
+                        <li>Suspende el mic con bandas elásticas</li>
+                        <li>Absorbe vibraciones de la mesa</li>
+                        <li>Evita que golpes y movimientos se graben</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>🔌 Conexiones: USB vs. XLR</h5>
+                    <ul>
+                        <li><strong>USB:</strong> Se conecta directo al computador. Simple y económico.</li>
+                        <li><strong>XLR:</strong> Necesita interfaz de audio. Más profesional y flexible.</li>
+                        <li>En el lab usaremos la conexión disponible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Quality Matters -->
+        <div class="tip warning-tip">
+            <strong>⚠️ ¿Por qué importa la calidad de audio?</strong> Investigadores de la Universidad del Sur de California (USC) descubrieron que la calidad del audio influye en si las personas creen lo que escuchan. Un audio con eco, ruido de fondo o distorsión no solo es molesto — hace que el oyente confíe menos en el mensaje. ¡Tu contenido merece sonar bien!
+        </div>
+
+        <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-3-microphones-recorders-filters/" class="resource-link" target="_blank" style="margin-top: 10px;">📖 Leer Capítulo 3 completo — Tools for Podcasting</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- INTERVIEW SKILLS (Ch. 5) -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase" style="border-top-color: #e0a856;">
+        <div class="phase-header">
+            <div class="phase-number">🎤</div>
+            <div class="phase-title-group">
+                <h3>El arte de la entrevista y la conversación en podcast</h3>
+                <div class="time">📖 Basado en el <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-5-the-art-of-the-interview/" target="_blank" style="color: var(--sage);">Capítulo 5 – Tools for Podcasting</a></div>
+            </div>
+        </div>
+
+        <p>Ya sea que entrevistes a alguien o converses con tu compañero/a de podcast, la calidad de la interacción verbal es tan importante como la calidad del audio. Aquí hay técnicas que transforman una conversación común en una entrevista de podcast profesional.</p>
+
+        <!-- Preparation -->
+        <div class="activity">
+            <div class="activity-label">📋 Antes de grabar</div>
+            <h4>Preparación e investigación</h4>
+            <p>La preparación marca la diferencia entre una entrevista memorable y una que se siente improvisada:</p>
+            <ul style="padding-left: 22px;">
+                <li><strong>Investiga a tu invitado/a:</strong> Busca información sobre la persona, su trabajo, sus intereses. Esto demuestra respeto y genera confianza.</li>
+                <li><strong>Prepara preguntas:</strong> Ten entre 5-8 preguntas escritas. Aunque la conversación fluya naturalmente, tener preguntas preparadas reduce los nervios y guía la conversación.</li>
+                <li><strong>Comparte el plan general</strong> con tu invitado/a (pero no las preguntas exactas). Puedes decirle los temas que van a cubrir para que se sienta cómodo/a.</li>
+                <li><strong>Nunca le digas al invitado qué decir,</strong> pero sí puedes darle consejos sobre cómo dar una buena entrevista (hablar claro, dar ejemplos, contar historias).</li>
+            </ul>
+        </div>
+
+        <!-- Open-Ended Questions -->
+        <div class="activity">
+            <div class="activity-label">❓ Técnica clave</div>
+            <h4>Preguntas abiertas vs. preguntas cerradas</h4>
+            <p>Las preguntas abiertas son la herramienta más poderosa del entrevistador. Invitan a la persona a contar historias, no solo a dar datos.</p>
+
+            <table class="vocab-table">
+                <tbody><tr>
+                    <th>❌ Pregunta cerrada</th>
+                    <th>✅ Pregunta abierta</th>
+                    <th>¿Por qué es mejor?</th>
+                </tr>
+                <tr>
+                    <td>"¿Estás contento con tu trabajo?"</td>
+                    <td>"¿Qué aspectos de tu trabajo te dan la mayor satisfacción?"</td>
+                    <td>Invita a una respuesta más larga y personal</td>
+                </tr>
+                <tr>
+                    <td>"¿Fue difícil emigrar?"</td>
+                    <td>"¿Cómo fue tu experiencia al llegar a un nuevo país?"</td>
+                    <td>Permite contar una historia, no solo decir sí/no</td>
+                </tr>
+                <tr>
+                    <td>"¿Te gusta la comida peruana?"</td>
+                    <td>"¿Qué papel juega la comida en tu identidad cultural?"</td>
+                    <td>Conecta con temas más profundos de comunidad</td>
+                </tr>
+                <tr>
+                    <td>"¿Hay discriminación?"</td>
+                    <td>"¿Puedes describir una situación en la que sentiste desigualdad?"</td>
+                    <td>Genera un ejemplo concreto y emotivo</td>
+                </tr>
+            </tbody></table>
+
+            <div class="tip">
+                <strong>💡 Fórmulas útiles para preguntas abiertas en español:</strong><br>
+                "¿Cómo fue que...?" · "¿Puedes explicar...?" · "¿Qué significó para ti...?" · "Cuéntame sobre..." · "¿Qué piensas de...?" · "¿De qué manera...?"
+            </div>
+        </div>
+
+        <!-- Listening & Silence -->
+        <div class="activity">
+            <div class="activity-label">👂 Habilidades de escucha</div>
+            <h4>La escucha activa y el poder del silencio</h4>
+            <div class="two-col">
+                <div class="col-box">
+                    <h5>🎯 Escucha activa</h5>
+                    <ul>
+                        <li><strong>Escucha de verdad</strong> — no pienses en la siguiente pregunta mientras la persona habla</li>
+                        <li><strong>Haz preguntas de seguimiento:</strong> "¿Puedes contarme más sobre eso?" "¿Y después qué pasó?"</li>
+                        <li><strong>Sé curioso/a</strong> — la mejor entrevista nace de la curiosidad genuina</li>
+                        <li><strong>No interrumpas</strong> — deja que la persona termine su idea</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>🤫 El poder del silencio</h5>
+                    <ul>
+                        <li>Después de una respuesta, <strong>espera 3-5 segundos</strong> antes de hablar</li>
+                        <li>Las personas naturalmente llenan el silencio con más detalles</li>
+                        <li>Los momentos más interesantes frecuentemente vienen <strong>después</strong> de un silencio</li>
+                        <li>No tengas miedo de las pausas — se pueden editar después si son muy largas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Language & Environment -->
+        <div class="activity">
+            <div class="activity-label">🤝 Crear un buen ambiente</div>
+            <h4>Lenguaje corporal y conexión con el invitado</h4>
+            <ul style="padding-left: 22px;">
+                <li><strong>Rompe el hielo:</strong> Antes de grabar, conversa informalmente. Pregunta cómo está, comenta algo ligero. Esto relaja a la persona.</li>
+                <li><strong>Contacto visual:</strong> Mira a tu invitado/a mientras habla, no la pantalla o tus notas.</li>
+                <li><strong>Asiente con la cabeza</strong> en lugar de decir "ajá" o "sí" repetidamente — esos sonidos se graban y pueden distraer al oyente.</li>
+                <li><strong>Elimina distracciones:</strong> Silencia tu teléfono. Cierra las pestañas innecesarias. Dale a tu invitado/a tu atención completa.</li>
+                <li><strong>Si graban en persona:</strong> Siéntense a una distancia cómoda. Si usan un solo micrófono bidireccional, siéntense uno frente al otro.</li>
+            </ul>
+        </div>
+
+        <!-- Ending the Interview -->
+        <div class="activity">
+            <div class="activity-label">🎬 Cerrar bien</div>
+            <h4>Cómo terminar una entrevista</h4>
+            <p>Un final débil arruina una gran entrevista. Planifica un cierre memorable:</p>
+            <ul style="padding-left: 22px;">
+                <li><strong>Pregunta de cierre:</strong> "¿Hay algo más que quisieras compartir con nuestros oyentes?" — esto a veces produce las mejores respuestas.</li>
+                <li><strong>Agradece</strong> a tu invitado/a tanto durante la grabación como después. Es profesional y genera buenas relaciones.</li>
+                <li><strong>No termines de repente</strong> — crea un cierre: resume lo que aprendieron, comparte una reflexión, invita al oyente a actuar.</li>
+                <li><strong>Pide permiso</strong> para usar la entrevista, especialmente si el tema es sensible.</li>
+            </ul>
+        </div>
+
+        <div class="tip warning-tip">
+            <strong>⚠️ Para tu proyecto de SPAN 2156:</strong> Recuerda que tu podcast debe conectar el tema de <em>Comunidades</em> con un ángulo de <em>justicia social</em>. Las preguntas abiertas son perfectas para explorar cómo las comunidades enfrentan retos sociales. Piensa en preguntas que inviten a tu entrevistado/a a compartir experiencias personales y perspectivas críticas.
+        </div>
+
+        <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-5-the-art-of-the-interview/" class="resource-link" target="_blank" style="margin-top: 10px;">📖 Leer Capítulo 5 completo — Tools for Podcasting</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
     <!-- FASE 1: SETUP & MIC TECHNIQUE -->
     <!-- ═══════════════════════════════════════════ -->
     <div class="phase phase-1">
         <div class="phase-header">
             <div class="phase-number">🎙️</div>
             <div class="phase-title-group">
-                <h3>Fase 1: El micrófono y tu voz</h3>
+                <h3>Fase 1: El micrófono y tu voz — Práctica en el laboratorio</h3>
                 <div class="time">⏱ 12 minutos</div>
             </div>
         </div>
 
-        <p>Antes de grabar, necesitamos entender cómo funciona el micrófono y cómo posicionarlo correctamente. Un buen posicionamiento marca la diferencia entre audio profesional y audio mediocre.</p>
+        <p>Ahora que conoces los tipos de micrófonos y patrones de captura, vamos a practicar el posicionamiento correcto con los micrófonos del laboratorio.</p>
 
         <div class="activity">
             <div class="activity-label">📐 Demostración</div>
-            <h4>Posicionamiento del micrófono</h4>
-            <p>La profesora demuestra las tres reglas de oro:</p>
+            <h4>Las tres reglas de oro del posicionamiento</h4>
+            <p>La profesora demuestra con el micrófono del laboratorio:</p>
             <ol>
-                <li><strong>Distancia:</strong> Coloca el micrófono a un puño de distancia de tu boca (aprox. 15–20 cm). Ni más cerca ni más lejos.</li>
-                <li><strong>Ángulo:</strong> Posiciona el micrófono ligeramente de lado (a 45° de tu boca), no directamente enfrente. Esto evita los "pops" de las letras P, T y B.</li>
-                <li><strong>Estabilidad:</strong> No toques ni muevas el micrófono mientras grabas. Los golpes se escuchan como truenos en la grabación.</li>
+                <li><strong>Distancia:</strong> Coloca el micrófono a un puño de distancia de tu boca (aprox. 15–20 cm). Más cerca = más graves y pops. Más lejos = sonido hueco y con eco.</li>
+                <li><strong>Ángulo:</strong> Posiciona el micrófono ligeramente de lado (a 45° de tu boca), no directamente enfrente. Esto reduce los "pops" de las plosivas (P, T, B) sin necesidad de filtro anti-pop.</li>
+                <li><strong>Estabilidad:</strong> No toques ni muevas el micrófono mientras grabas. Los golpes se escuchan como truenos en la grabación. Si necesitas ajustar, pausa primero.</li>
             </ol>
         </div>
 
+        <div class="activity">
+            <div class="activity-label">👂 Escucha activa</div>
+            <h4>Demostración: Sonido bueno vs. sonido malo</h4>
+            <p>La profesora graba la misma frase de cuatro maneras diferentes. Escucha y nota la diferencia:</p>
+            <table class="vocab-table">
+                <tbody><tr>
+                    <th>Prueba</th>
+                    <th>Posición del micrófono</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr>
+                    <td>1 ✅</td>
+                    <td>15–20 cm, ángulo de 45°</td>
+                    <td>Claro, cálido, profesional</td>
+                </tr>
+                <tr>
+                    <td>2 ❌</td>
+                    <td>Muy lejos (50+ cm)</td>
+                    <td>Hueco, con eco, ruido de fondo</td>
+                </tr>
+                <tr>
+                    <td>3 ❌</td>
+                    <td>Muy cerca, directo al frente</td>
+                    <td>Pops en P y B, sonido saturado</td>
+                </tr>
+                <tr>
+                    <td>4 ❌</td>
+                    <td>Hablando por detrás del mic</td>
+                    <td>Apenas se escucha (patrón cardioide rechaza)</td>
+                </tr>
+            </tbody></table>
+        </div>
+
         <div class="tip">
-            <strong>💡 Vocabulario técnico clave:</strong> plosivas = los sonidos explosivos de P, T, B que causan "pops" en el micrófono. En inglés se llaman <em>plosives</em>. Un filtro anti-pop (<em>pop filter</em>) ayuda, pero la mejor solución es el ángulo correcto.
+            <strong>💡 Vocabulario técnico clave:</strong> plosivas = los sonidos explosivos de P, T, B que causan "pops" en el micrófono. En inglés se llaman <em>plosives</em>. Un filtro anti-pop ayuda, pero la mejor solución es el ángulo correcto + la distancia adecuada.
         </div>
 
         <table class="vocab-table">
@@ -493,6 +796,21 @@
                 <td>Pista de audio</td>
                 <td>Audio track</td>
                 <td>Cada capa de sonido en el editor</td>
+            </tr>
+            <tr>
+                <td>Patrón cardioide</td>
+                <td>Cardioid pattern</td>
+                <td>Mic capta sonido principalmente del frente</td>
+            </tr>
+            <tr>
+                <td>Filtro anti-pop</td>
+                <td>Pop filter</td>
+                <td>Malla que bloquea ráfagas de aire</td>
+            </tr>
+            <tr>
+                <td>Soporte antivibración</td>
+                <td>Shock mount</td>
+                <td>Suspensión que absorbe golpes y vibraciones</td>
             </tr>
         </tbody></table>
     </div>
@@ -635,40 +953,163 @@
         <div class="phase-header">
             <div class="phase-number">🎵</div>
             <div class="phase-title-group">
-                <h3>Fase 4: Música, efectos y exportación</h3>
-                <div class="time">⏱ 8 minutos</div>
+                <h3>Fase 4: Mezcla, música y producción final</h3>
+                <div class="time">⏱ 12 minutos · 📖 Basado en el <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-8-editing-software-audiograms/" target="_blank" style="color: var(--sage);">Capítulo 8 – Tools for Podcasting</a></div>
             </div>
         </div>
 
-        <p>Un buen podcast tiene música de introducción y transiciones. Vamos a ver cómo agregar una pista de música de fondo y exportar el producto final.</p>
+        <p>La producción final es donde tu podcast pasa de ser una grabación a sonar profesional. Vamos a aprender a trabajar con múltiples pistas, mezclar voces con música, y preparar el archivo final.</p>
 
+        <!-- Listening Before Editing -->
         <div class="activity">
-            <div class="activity-label">🎶 Demostración rápida</div>
-            <h4>Agregar música de fondo</h4>
+            <div class="activity-label">👂 Paso previo esencial</div>
+            <h4>Escucha antes de editar</h4>
+            <p>Según el Capítulo 8 de <em>Tools for Podcasting</em>, el mejor punto de partida para editar es <strong>escuchar</strong>. Escucha toda tu grabación a velocidad normal — aunque sea tentador escuchar al doble de velocidad. Escuchar a velocidad normal te permite sentir el ritmo y las pausas naturales de la conversación. Mientras escuchas, toma notas sobre los mejores momentos y anota el tiempo (<em>timestamp</em>) para encontrarlos fácilmente después.</p>
+        </div>
+
+        <!-- Multi-Track Editing -->
+        <div class="activity">
+            <div class="activity-label">🔀 Trabajar con múltiples pistas</div>
+            <h4>Sincronizar pistas de audio (para entrevistas en grupo)</h4>
+            <p>Si grabaron por separado (por ejemplo, cada persona grabó su voz en su teléfono), necesitan sincronizar las pistas:</p>
+            <ol class="steps">
+                <li>Importa ambas grabaciones: <strong>File → Import → Audio</strong> para cada archivo. Cada una aparecerá como una pista separada.</li>
+                <li>Activa la sincronización: <strong>Tracks → Keep Tracks Synchronized</strong> (verás un ícono de reloj). Esto evita que las pistas se desalineen al editar.</li>
+                <li>Alinea el inicio: Usa la herramienta de <strong>Time Shift</strong> (doble flecha ↔) para mover una pista hasta que las voces coincidan en tiempo.</li>
+                <li><strong>Truco:</strong> Al inicio de la grabación, cuentan "3, 2, 1" juntos — esto crea un pico visible en ambas pistas que facilita la sincronización.</li>
+            </ol>
+
+            <div class="tip">
+                <strong>💡 ¿Cuándo necesitas múltiples pistas?</strong> Si tu grupo grabó todo en un solo micrófono en el lab, ya tienes una sola pista. Múltiples pistas son necesarias si grabaron por separado (por ejemplo, una entrevista a distancia usando el método "double-ender").
+            </div>
+        </div>
+
+        <!-- Volume & Normalization -->
+        <div class="activity">
+            <div class="activity-label">🔊 Nivelar el volumen</div>
+            <h4>Normalización y balance de voces</h4>
+            <p>Un problema común: un hablante suena muy alto y otro muy bajo. Aquí tienes cómo arreglarlo:</p>
+
+            <div class="two-col">
+                <div class="col-box">
+                    <h5>📊 Normalizar el volumen</h5>
+                    <ul>
+                        <li>Selecciona toda la pista (<strong>Ctrl+A</strong>)</li>
+                        <li><strong>Effect → Loudness Normalization</strong></li>
+                        <li>Nivel objetivo: <strong>-16 LUFS</strong> (estándar para podcasts)</li>
+                        <li>Aplica a cada pista por separado para igualar volúmenes</li>
+                    </ul>
+                </div>
+                <div class="col-box">
+                    <h5>🎚️ Ajuste manual por pista</h5>
+                    <ul>
+                        <li>Cada pista tiene un <strong>deslizador de volumen</strong> a la izquierda</li>
+                        <li>Usa <strong>Effect → Amplify</strong> para subir o bajar secciones específicas</li>
+                        <li>Nunca dejes que el medidor llegue al rojo (distorsión)</li>
+                        <li>Escucha con auriculares para verificar el balance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Noise Reduction -->
+        <div class="activity">
+            <div class="activity-label">🧹 Limpiar el audio</div>
+            <h4>Reducción de ruido de fondo</h4>
+            <p>Si tu grabación tiene un zumbido, ventilador o ruido constante de fondo, Audacity puede eliminarlo:</p>
+            <ol class="steps">
+                <li>Busca un segmento de <strong>solo ruido</strong> (donde nadie habla) — necesitas al menos 1-2 segundos.</li>
+                <li>Selecciona ese segmento de ruido.</li>
+                <li>Ve a <strong>Effect → Noise Reduction</strong> → haz clic en <strong>"Get Noise Profile"</strong>. Esto le enseña a Audacity cómo suena el ruido.</li>
+                <li>Ahora selecciona <strong>toda la pista</strong> (Ctrl+A).</li>
+                <li>Ve a <strong>Effect → Noise Reduction</strong> → haz clic en <strong>OK</strong>. ¡El ruido desaparece!</li>
+            </ol>
+
+            <div class="tip warning-tip">
+                <strong>⚠️ Cuidado con la edición excesiva:</strong> No elimines TODA la respiración — suena antinatural si no se escucha ninguna inhalación. Es mejor <strong>reducir el volumen</strong> de las respiraciones en lugar de cortarlas completamente. El objetivo es un sonido limpio pero natural.
+            </div>
+        </div>
+
+        <!-- Adding Music -->
+        <div class="activity">
+            <div class="activity-label">🎶 Agregar música</div>
+            <h4>Música de introducción, transiciones y cierre</h4>
+            <p>La estructura típica de un podcast usa música en tres momentos clave:</p>
+
+            <table class="vocab-table">
+                <tbody><tr>
+                    <th>Momento</th>
+                    <th>Función</th>
+                    <th>Duración típica</th>
+                    <th>Técnica en Audacity</th>
+                </tr>
+                <tr>
+                    <td><strong>🎵 Intro</strong></td>
+                    <td>Establece el tono y la identidad del podcast</td>
+                    <td>15–30 segundos</td>
+                    <td>Música sola → Fade Out mientras la voz comienza</td>
+                </tr>
+                <tr>
+                    <td><strong>🔄 Transición / Bumper</strong></td>
+                    <td>Marca un cambio de tema o sección</td>
+                    <td>3–5 segundos</td>
+                    <td>Insertar entre segmentos con Fade In + Fade Out</td>
+                </tr>
+                <tr>
+                    <td><strong>🎵 Outro / Cierre</strong></td>
+                    <td>Señala el final y da un cierre profesional</td>
+                    <td>15–30 segundos</td>
+                    <td>Voz de cierre → música sube con Fade In → Fade Out final</td>
+                </tr>
+            </tbody></table>
+
+            <p><strong>Pasos para agregar música de fondo:</strong></p>
             <ol class="steps">
                 <li>Descarga música libre de derechos. Fuentes recomendadas: <a href="https://freemusicarchive.org/" target="_blank">Free Music Archive</a>, <a href="https://incompetech.com/" target="_blank">Incompetech</a>, o la biblioteca de audio de YouTube Studio.</li>
                 <li>En Audacity: <strong>File → Import → Audio</strong> y selecciona el archivo de música. Aparecerá como una nueva pista debajo de tu voz.</li>
-                <li>Usa la herramienta de <strong>Time Shift</strong> (doble flecha ↔) para mover la música al inicio o final.</li>
-                <li>Baja el volumen de la música: selecciona la pista de música → <strong>Effect → Amplify</strong> → reduce a -15 dB o -20 dB para que no tape tu voz.</li>
-                <li>Aplica <strong>Fade Out</strong> al final de la música: selecciona los últimos 3-5 segundos → <strong>Effect → Fade Out</strong>.</li>
+                <li>Usa la herramienta de <strong>Time Shift</strong> (doble flecha ↔) para mover la música al momento deseado.</li>
+                <li>Baja el volumen de la música: selecciona la pista de música → <strong>Effect → Amplify</strong> → reduce a <strong>-15 dB o -20 dB</strong> para que no tape tu voz.</li>
+                <li>Aplica transiciones suaves:
+                    <ul style="margin-top: 5px;">
+                        <li><strong>Fade In:</strong> Selecciona los primeros 2-3 segundos → <strong>Effect → Fade In</strong></li>
+                        <li><strong>Fade Out:</strong> Selecciona los últimos 3-5 segundos → <strong>Effect → Fade Out</strong></li>
+                    </ul>
+                </li>
+                <li>Si la música de intro se superpone con la voz, baja aún más su volumen en la zona donde hablas (selecciona solo esa parte → <strong>Effect → Amplify</strong> → reduce más).</li>
             </ol>
         </div>
 
+        <!-- Template Idea -->
         <div class="activity">
-            <div class="activity-label">📤 Exportar</div>
-            <h4>Guardar tu archivo final como MP3</h4>
+            <div class="activity-label">📁 Consejo profesional</div>
+            <h4>Crea una plantilla reutilizable</h4>
+            <p>Una vez que tengas tu intro y outro con música editados, guarda ese proyecto como <strong>plantilla</strong>. Así no tendrás que repetir el trabajo para cada episodio. Simplemente abre la plantilla y agrega el contenido nuevo en el medio.</p>
+            <ul style="padding-left: 22px;">
+                <li><strong>File → Save Project → Backup Project</strong> — guarda una copia de seguridad antes de aplicar efectos (los efectos en Audacity son "destructivos", no se pueden deshacer después de cerrar).</li>
+                <li>Nombra tu plantilla: <code>Plantilla_Podcast_SPAN2156.aup3</code></li>
+            </ul>
+        </div>
+
+        <!-- Export -->
+        <div class="activity">
+            <div class="activity-label">📤 Exportar el archivo final</div>
+            <h4>De proyecto a MP3</h4>
+            <p>Recuerda: siempre graba y edita en formato sin comprimir (WAV/AIFF). Solo al final exportas como MP3.</p>
             <ol class="steps">
                 <li><strong>File → Export → Export as MP3</strong></li>
                 <li>Nombre del archivo: <code>Apellido_Podcast_SPAN2156.mp3</code></li>
-                <li>Calidad: 128 kbps (suficiente para voz)</li>
+                <li>Calidad: <strong>128 kbps</strong> (suficiente para voz) o <strong>192 kbps</strong> si hay mucha música</li>
                 <li>Agrega metadatos: nombre del podcast, tu nombre, fecha</li>
-                <li>¡Escucha el MP3 completo antes de enviarlo!</li>
+                <li>¡Escucha el MP3 completo con auriculares antes de enviarlo!</li>
             </ol>
         </div>
 
         <div class="tip warning-tip">
-            <strong>⚠️ Importante:</strong> Recuerda que <strong>File → Save Project</strong> guarda el proyecto de Audacity (formato .aup3), pero NO crea un MP3. Para entregar tu podcast, siempre necesitas usar <strong>Export as MP3</strong>.
+            <strong>⚠️ Importante:</strong> <strong>File → Save Project</strong> guarda el proyecto de Audacity (formato .aup3), pero NO crea un MP3. Para entregar tu podcast, siempre necesitas usar <strong>Export as MP3</strong>. Son dos cosas diferentes.
         </div>
+
+        <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-8-editing-software-audiograms/" class="resource-link" target="_blank" style="margin-top: 10px;">📖 Leer Capítulo 8 completo — Tools for Podcasting</a>
+        <a href="https://youtu.be/CFVrFHTkAGo" class="resource-link alt" target="_blank" style="margin-top: 10px;">🎬 Video Tutorial: Audacity Editing</a>
     </div>
 
     <!-- ═══════════════════════════════════════════ -->
@@ -686,7 +1127,10 @@
 
         <div style="margin: 15px 0;">
             <a href="https://pressbooks.pub/toolsforpodcasting/" class="resource-link" target="_blank">📖 Tools for Podcasting (OER completo)</a>
-            <a href="https://youtu.be/CFVrFHTkAGo" class="resource-link alt" target="_blank">🎬 Tutorial Audacity (Video)</a>
+            <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-3-microphones-recorders-filters/" class="resource-link alt" target="_blank">🎤 Cap. 3: Micrófonos y equipo</a>
+            <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-5-the-art-of-the-interview/" class="resource-link" target="_blank">🎙️ Cap. 5: El arte de la entrevista</a>
+            <a href="https://pressbooks.pub/toolsforpodcasting/chapter/chapter-8-editing-software-audiograms/" class="resource-link alt" target="_blank">✂️ Cap. 8: Edición y mezcla</a>
+            <a href="https://youtu.be/CFVrFHTkAGo" class="resource-link" target="_blank">🎬 Tutorial Audacity (Video)</a>
         </div>
 
         <table class="vocab-table">
@@ -698,12 +1142,17 @@
             <tr>
                 <td>Cap. 3</td>
                 <td>Microphones, Recorders, Filters</td>
-                <td>Tipos de micrófonos, filtros anti-pop, auriculares</td>
+                <td>Tipos de micrófonos, patrones de captura, filtros anti-pop, conexiones</td>
             </tr>
             <tr>
                 <td>Cap. 4</td>
                 <td>Best Practices for Recording</td>
-                <td>Buenas vs. malas grabaciones, calidad de sonido</td>
+                <td>Buenas vs. malas grabaciones, calidad de sonido, soundproofing</td>
+            </tr>
+            <tr>
+                <td>Cap. 5</td>
+                <td>The Art of the Interview</td>
+                <td>Preguntas abiertas, escucha activa, silencio, cierre de entrevista</td>
             </tr>
             <tr>
                 <td>Cap. 7</td>
@@ -713,7 +1162,7 @@
             <tr>
                 <td>Cap. 8</td>
                 <td>Editing Software &amp; Audiograms</td>
-                <td>Tutorial completo de Audacity</td>
+                <td>Audacity, mezcla multi-pista, sincronización, música, normalización</td>
             </tr>
         </tbody></table>
 
@@ -735,8 +1184,9 @@
         <h3>📝 Tarea para la próxima clase</h3>
         <p>Antes de la próxima sesión del taller (V-T Session 2), completa lo siguiente:</p>
         <ul>
-            <li><strong>Lee</strong> los Capítulos 3 y 4 del libro <a href="https://pressbooks.pub/toolsforpodcasting/" target="_blank">Tools for Podcasting</a>.</li>
+            <li><strong>Lee</strong> los Capítulos 3, 4 y 5 del libro <a href="https://pressbooks.pub/toolsforpodcasting/" target="_blank">Tools for Podcasting</a> (micrófonos, grabación y entrevistas).</li>
             <li><strong>Practica</strong> en Audacity: graba 2 minutos hablando sobre tu tema del podcast y edita los errores.</li>
+            <li><strong>Prepara</strong> 5 preguntas abiertas en español para tu podcast. Usa las fórmulas del taller: "¿Cómo fue que...?", "¿Qué significó para ti...?", etc.</li>
             <li><strong>Reúnete</strong> con tu grupo de podcast y definan: tema, estructura del episodio, y quién habla en cada segmento.</li>
             <li><strong>Busca</strong> música libre de derechos para la introducción de tu podcast y descárgala.</li>
         </ul>
