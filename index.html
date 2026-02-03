@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///Users/liliana/Downloads/VT_Workshop1_Audio_Production_SPAN2156.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-T Workshop 1: Audio Production &amp; Podcast Editing | SPAN 2156</title>
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1a3a2a;
+            --sage: #4a7c59;
+            --mint: #a8d5ba;
+            --cream: #faf8f2;
+            --warm: #f5efe0;
+            --accent: #d4a574;
+            --coral: #c9735b;
+            --text: #2c2c2c;
+            --muted: #6b6b6b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HERO HEADER */
+        .hero {
+            background: linear-gradient(160deg, var(--forest) 0%, #2d5a3f 60%, var(--sage) 100%);
+            color: white;
+            padding: 50px 40px 45px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(168,213,186,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '🎙️';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 80px;
+            opacity: 0.2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4em;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-weight: 400;
+            font-size: 1.1em;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+        /* CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 25px 60px;
+        }
+
+        /* OBJECTIVES */
+        .objectives {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin: -30px 25px 35px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--sage);
+        }
+
+        .objectives h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2em;
+            color: var(--forest);
+            margin-bottom: 12px;
+        }
+
+        .obj-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+        }
+
+        .obj-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.92em;
+        }
+
+        .obj-item .check {
+            color: var(--sage);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* PHASE SECTIONS */
+        .phase {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border-top: 4px solid transparent;
+        }
+
+        .phase.phase-1 { border-top-color: var(--sage); }
+        .phase.phase-2 { border-top-color: var(--accent); }
+        .phase.phase-3 { border-top-color: var(--coral); }
+        .phase.phase-4 { border-top-color: #5b8ec9; }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .phase-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            flex-shrink: 0;
+        }
+
+        .phase-1 .phase-number { background: #e8f5e9; }
+        .phase-2 .phase-number { background: #fff3e0; }
+        .phase-3 .phase-number { background: #fbe9e7; }
+        .phase-4 .phase-number { background: #e3f2fd; }
+
+        .phase-title-group h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2em;
+            color: var(--forest);
+            line-height: 1.2;
+        }
+
+        .phase-title-group .time {
+            font-size: 0.82em;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .phase p, .phase li {
+            font-size: 0.95em;
+            color: #3a3a3a;
+        }
+
+        .phase p { margin-bottom: 12px; }
+
+        /* ACTIVITY BOXES */
+        .activity {
+            background: var(--warm);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 15px 0;
+        }
+
+        .activity-label {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--sage);
+            margin-bottom: 8px;
+        }
+
+        .activity h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.05em;
+            color: var(--forest);
+            margin-bottom: 8px;
+        }
+
+        .activity ol, .activity ul {
+            padding-left: 22px;
+            margin-top: 8px;
+        }
+
+        .activity li {
+            margin-bottom: 6px;
+        }
+
+        /* TIP CALLOUTS */
+        .tip {
+            background: linear-gradient(135deg, #f0f7f2 0%, #e8f0ea 100%);
+            border-left: 4px solid var(--sage);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            margin: 15px 0;
+            font-size: 0.92em;
+        }
+
+        .tip strong { color: var(--forest); }
+
+        .warning-tip {
+            background: linear-gradient(135deg, #fff8f0 0%, #fff3e6 100%);
+            border-left-color: var(--accent);
+        }
+
+        .warning-tip strong { color: #8a5a2c; }
+
+        /* VOCAB TABLE */
+        .vocab-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            font-size: 0.9em;
+        }
+
+        .vocab-table th {
+            background: var(--forest);
+            color: white;
+            padding: 10px 16px;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .vocab-table td {
+            padding: 9px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .vocab-table tr:nth-child(even) td { background: #f9faf8; }
+        .vocab-table tr:last-child td { border-bottom: none; }
+
+        /* STEPS */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step;
+            padding: 8px 0 8px 40px;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 28px;
+            height: 28px;
+            background: var(--mint);
+            color: var(--forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.82em;
+        }
+
+        /* RESOURCE LINK */
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--forest);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin: 5px 4px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26,58,42,0.3);
+        }
+
+        .resource-link.alt {
+            background: var(--sage);
+        }
+
+        /* HOMEWORK / TAREA */
+        .tarea {
+            background: linear-gradient(135deg, var(--forest) 0%, #2d5a3f 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin-top: 25px;
+        }
+
+        .tarea h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+
+        .tarea p, .tarea li {
+            font-size: 0.93em;
+            opacity: 0.92;
+        }
+
+        .tarea ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .tarea li { margin-bottom: 6px; }
+
+        .tarea a {
+            color: var(--mint);
+        }
+
+        /* TWO COLUMNS */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 12px 0;
+        }
+
+        .col-box {
+            background: var(--warm);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .col-box h5 {
+            font-family: 'Fraunces', serif;
+            color: var(--forest);
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .col-box ul {
+            padding-left: 18px;
+            font-size: 0.88em;
+        }
+
+        .col-box li { margin-bottom: 3px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .hero { padding: 35px 25px 30px; }
+            .hero h1 { font-size: 1.7em; }
+            .hero::after { display: none; }
+            .objectives { margin: -25px 15px 30px; padding: 22px; }
+            .obj-grid { grid-template-columns: 1fr; }
+            .phase { padding: 22px; }
+            .two-col { grid-template-columns: 1fr; }
+            .container { padding: 25px 15px 50px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-tag">V-T Session 1 · Language Lab</div>
+    <h1>🎧 Workshop 1: Audio Production &amp;<br>Podcast Editing</h1>
+    <h2>Audacity · Grabación · Edición de audio · Música y efectos</h2>
+    <div class="hero-meta">
+        <span>📅 4 de febrero, 2026</span>
+        <span>📍 Language Lab</span>
+        <span>⏱ 50 min</span>
+        <span>📖 SPAN 2156</span>
+    </div>
+</div>
+
+<!-- OBJECTIVES -->
+<div class="objectives">
+    <h3>🎯 Objetivos del taller</h3>
+    <div class="obj-grid">
+        <div class="obj-item"><span class="check">✓</span> Configurar Audacity y familiarizarse con la interfaz</div>
+        <div class="obj-item"><span class="check">✓</span> Posicionar correctamente el micrófono para grabar</div>
+        <div class="obj-item"><span class="check">✓</span> Grabar audio claro y con buena calidad</div>
+        <div class="obj-item"><span class="check">✓</span> Identificar y corregir errores comunes de grabación</div>
+        <div class="obj-item"><span class="check">✓</span> Editar: cortar silencios, errores y añadir música</div>
+        <div class="obj-item"><span class="check">✓</span> Exportar el archivo final en formato MP3</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FASE 1: SETUP & MIC TECHNIQUE -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase phase-1">
+        <div class="phase-header">
+            <div class="phase-number">🎙️</div>
+            <div class="phase-title-group">
+                <h3>Fase 1: El micrófono y tu voz</h3>
+                <div class="time">⏱ 12 minutos</div>
+            </div>
+        </div>
+
+        <p>Antes de grabar, necesitamos entender cómo funciona el micrófono y cómo posicionarlo correctamente. Un buen posicionamiento marca la diferencia entre audio profesional y audio mediocre.</p>
+
+        <div class="activity">
+            <div class="activity-label">📐 Demostración</div>
+            <h4>Posicionamiento del micrófono</h4>
+            <p>La profesora demuestra las tres reglas de oro:</p>
+            <ol>
+                <li><strong>Distancia:</strong> Coloca el micrófono a un puño de distancia de tu boca (aprox. 15–20 cm). Ni más cerca ni más lejos.</li>
+                <li><strong>Ángulo:</strong> Posiciona el micrófono ligeramente de lado (a 45° de tu boca), no directamente enfrente. Esto evita los "pops" de las letras P, T y B.</li>
+                <li><strong>Estabilidad:</strong> No toques ni muevas el micrófono mientras grabas. Los golpes se escuchan como truenos en la grabación.</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>💡 Vocabulario técnico clave:</strong> plosivas = los sonidos explosivos de P, T, B que causan "pops" en el micrófono. En inglés se llaman <em>plosives</em>. Un filtro anti-pop (<em>pop filter</em>) ayuda, pero la mejor solución es el ángulo correcto.
+        </div>
+
+        <table class="vocab-table">
+            <tbody><tr>
+                <th>Término en español</th>
+                <th>English term</th>
+                <th>¿Qué es?</th>
+            </tr>
+            <tr>
+                <td>Plosivas / "pops"</td>
+                <td>Plosives</td>
+                <td>Sonidos explosivos (P, T, B) que distorsionan</td>
+            </tr>
+            <tr>
+                <td>Ruido de fondo</td>
+                <td>Background noise</td>
+                <td>Sonidos no deseados del ambiente</td>
+            </tr>
+            <tr>
+                <td>Nivel de entrada</td>
+                <td>Input level</td>
+                <td>Volumen de grabación en el software</td>
+            </tr>
+            <tr>
+                <td>Distorsión / saturación</td>
+                <td>Clipping</td>
+                <td>Cuando el volumen es demasiado alto y el sonido se rompe</td>
+            </tr>
+            <tr>
+                <td>Pista de audio</td>
+                <td>Audio track</td>
+                <td>Cada capa de sonido en el editor</td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FASE 2: AUDACITY BASICS & FIRST RECORDING -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase phase-2">
+        <div class="phase-header">
+            <div class="phase-number">💻</div>
+            <div class="phase-title-group">
+                <h3>Fase 2: Audacity – Interfaz y primera grabación</h3>
+                <div class="time">⏱ 15 minutos</div>
+            </div>
+        </div>
+
+        <p>Vamos a abrir Audacity y explorar los botones esenciales. No necesitas conocer todo el programa — solo lo básico para grabar y editar tu podcast.</p>
+
+        <div class="activity">
+            <div class="activity-label">🖥️ Guided walkthrough</div>
+            <h4>Conoce la interfaz de Audacity</h4>
+            <p>Sigue los pasos con la profesora en tu computadora:</p>
+            <ol class="steps">
+                <li>Abre Audacity. Verifica que el micrófono correcto esté seleccionado en la barra superior (menú desplegable de entrada de audio).</li>
+                <li>Localiza los <strong>controles de transporte</strong>: ⏺ Grabar (rojo), ⏹ Parar, ▶ Reproducir, ⏸ Pausa.</li>
+                <li>Observa el <strong>medidor de nivel</strong> (barras verdes en la parte superior). Cuando hables, deben moverse sin llegar al rojo.</li>
+                <li>Ajusta el <strong>nivel de entrada</strong> con el deslizador del micrófono. El objetivo: que tus picos de voz lleguen entre -12 dB y -6 dB.</li>
+                <li>Localiza las herramientas de <strong>selección</strong> (cursor I-beam) y <strong>zoom</strong> (lupa).</li>
+            </ol>
+        </div>
+
+        <div class="activity">
+            <div class="activity-label">🎤 Práctica guiada</div>
+            <h4>Tu primera grabación de prueba</h4>
+            <p>Graba el siguiente texto. Lee con voz clara y natural, como si estuvieras hablando con un amigo:</p>
+            <blockquote style="background: white; border-left: 3px solid var(--accent); padding: 12px 18px; border-radius: 0 8px 8px 0; margin: 10px 0; font-style: italic; color: var(--forest);">
+                "Hola, bienvenidos a nuestro podcast. Mi nombre es [tu nombre] y hoy vamos a hablar sobre [un tema que te apasiona]. Quédense con nosotros porque esta conversación va a estar muy interesante."
+            </blockquote>
+            <ol>
+                <li>Presiona ⏺ <strong>Grabar</strong>, espera 2 segundos de silencio, y lee el texto.</li>
+                <li>Cuando termines, presiona ⏹ <strong>Parar</strong>.</li>
+                <li>Presiona ▶ <strong>Reproducir</strong> y escucha tu grabación.</li>
+            </ol>
+        </div>
+
+        <div class="tip warning-tip">
+            <strong>⚠️ Errores comunes que vas a escuchar:</strong> ¿Tu grabación suena muy lejos? → Acerca el micrófono. ¿Se escuchan "pops"? → Ajusta el ángulo. ¿Hay mucho eco? → Habla más cerca del mic y evita superficies duras. ¿El volumen es muy bajo? → Sube el nivel de entrada.
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FASE 3: EDITING - MISTAKES & SILENCES -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase phase-3">
+        <div class="phase-header">
+            <div class="phase-number">✂️</div>
+            <div class="phase-title-group">
+                <h3>Fase 3: Edición — errores, silencios y limpieza</h3>
+                <div class="time">⏱ 15 minutos</div>
+            </div>
+        </div>
+
+        <p>La magia del podcast está en la edición. Nadie graba perfecto a la primera. La edición te permite eliminar errores, pausas largas y ruidos para que tu audio suene profesional.</p>
+
+        <div class="activity">
+            <div class="activity-label">🔬 Ejercicio práctico</div>
+            <h4>Graba con errores... ¡a propósito!</h4>
+            <p>Vamos a grabar un texto cometiendo errores intencionales para luego practicar la edición:</p>
+            <ol>
+                <li>Presiona ⏺ <strong>Grabar</strong> y lee esto, INCLUYENDO los errores marcados:
+                    <blockquote style="background: white; border-left: 3px solid var(--coral); padding: 12px 18px; border-radius: 0 8px 8px 0; margin: 10px 0; font-size: 0.93em;">
+                        "En este episodio vamos a explorar... <em>[pausa larga de 5 segundos]</em> ...las comunidades hispanas en Estados Unidos. Perdón, me equivoqué, empiezo de nuevo. Las comunidades hispanas enfrentan muchos retos relacionados con la justicia social, como el acceso a la educación y... <em>[tose o hace ruido]</em> ...y la representación cultural."
+                    </blockquote>
+                </li>
+                <li>Presiona ⏹ <strong>Parar</strong>.</li>
+            </ol>
+        </div>
+
+        <div class="activity">
+            <div class="activity-label">✂️ Editing tutorial</div>
+            <h4>Aprende a limpiar tu audio</h4>
+            <p>Ahora vamos a editar esa grabación paso a paso:</p>
+
+            <p><strong>A. Eliminar un silencio largo:</strong></p>
+            <ol class="steps">
+                <li>Usa el cursor (I-beam) para hacer clic al inicio del silencio largo.</li>
+                <li>Mantén clic y arrastra hasta el final del silencio para seleccionarlo (se marca en azul).</li>
+                <li>Escucha la selección: <strong>Edit → Play/Stop and Set Cursor</strong> (o barra espaciadora).</li>
+                <li>Presiona <strong>Delete</strong> en tu teclado. ¡El silencio desaparece!</li>
+            </ol>
+
+            <p><strong>B. Eliminar un error (la parte de "perdón, me equivoqué"):</strong></p>
+            <ol class="steps">
+                <li>Usa <strong>Ctrl+Z</strong> (deshacer) si te equivocas — siempre puedes volver atrás.</li>
+                <li>Haz zoom con <strong>Ctrl + rueda del ratón</strong> para ver mejor la forma de onda (<em>waveform</em>).</li>
+                <li>Selecciona desde "Perdón" hasta "de nuevo." y presiona <strong>Delete</strong>.</li>
+                <li>Escucha la transición. ¿Suena natural? Si no, ajusta la selección.</li>
+            </ol>
+
+            <p><strong>C. Eliminar un ruido o tos:</strong></p>
+            <ol class="steps">
+                <li>Los ruidos se ven como picos irregulares en la forma de onda.</li>
+                <li>Selecciona el segmento del ruido y presiona <strong>Delete</strong>.</li>
+                <li>Si queda un corte brusco, selecciona la transición y aplica: <strong>Effect → Fade In</strong> o <strong>Fade Out</strong>.</li>
+            </ol>
+        </div>
+
+        <div class="tip">
+            <strong>💡 Consejo profesional:</strong> Cuando te equivoques durante la grabación real de tu podcast, simplemente haz una pausa, aplaude una vez (para crear un pico visual fácil de encontrar), y repite la frase. Así en la edición puedes encontrar los errores rápidamente buscando los picos de los aplausos.
+        </div>
+
+        <div class="two-col">
+            <div class="col-box">
+                <h5>✅ Buenas prácticas</h5>
+                <ul>
+                    <li>Guarda tu proyecto frecuentemente (Ctrl+S)</li>
+                    <li>Usa Ctrl+Z para deshacer errores</li>
+                    <li>Escucha cada edición antes de continuar</li>
+                    <li>Deja pequeñas pausas naturales (0.5 seg)</li>
+                    <li>Mantén el ritmo conversacional</li>
+                </ul>
+            </div>
+            <div class="col-box">
+                <h5>❌ Errores frecuentes</h5>
+                <ul>
+                    <li>Cortar demasiado — suena robótico</li>
+                    <li>No verificar el nivel de entrada antes de grabar</li>
+                    <li>Mover el micrófono mientras hablas</li>
+                    <li>Olvidar guardar el proyecto</li>
+                    <li>Exportar sin escuchar el resultado final</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FASE 4: MUSIC, EFFECTS & EXPORT -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase phase-4">
+        <div class="phase-header">
+            <div class="phase-number">🎵</div>
+            <div class="phase-title-group">
+                <h3>Fase 4: Música, efectos y exportación</h3>
+                <div class="time">⏱ 8 minutos</div>
+            </div>
+        </div>
+
+        <p>Un buen podcast tiene música de introducción y transiciones. Vamos a ver cómo agregar una pista de música de fondo y exportar el producto final.</p>
+
+        <div class="activity">
+            <div class="activity-label">🎶 Demostración rápida</div>
+            <h4>Agregar música de fondo</h4>
+            <ol class="steps">
+                <li>Descarga música libre de derechos. Fuentes recomendadas: <a href="https://freemusicarchive.org/" target="_blank">Free Music Archive</a>, <a href="https://incompetech.com/" target="_blank">Incompetech</a>, o la biblioteca de audio de YouTube Studio.</li>
+                <li>En Audacity: <strong>File → Import → Audio</strong> y selecciona el archivo de música. Aparecerá como una nueva pista debajo de tu voz.</li>
+                <li>Usa la herramienta de <strong>Time Shift</strong> (doble flecha ↔) para mover la música al inicio o final.</li>
+                <li>Baja el volumen de la música: selecciona la pista de música → <strong>Effect → Amplify</strong> → reduce a -15 dB o -20 dB para que no tape tu voz.</li>
+                <li>Aplica <strong>Fade Out</strong> al final de la música: selecciona los últimos 3-5 segundos → <strong>Effect → Fade Out</strong>.</li>
+            </ol>
+        </div>
+
+        <div class="activity">
+            <div class="activity-label">📤 Exportar</div>
+            <h4>Guardar tu archivo final como MP3</h4>
+            <ol class="steps">
+                <li><strong>File → Export → Export as MP3</strong></li>
+                <li>Nombre del archivo: <code>Apellido_Podcast_SPAN2156.mp3</code></li>
+                <li>Calidad: 128 kbps (suficiente para voz)</li>
+                <li>Agrega metadatos: nombre del podcast, tu nombre, fecha</li>
+                <li>¡Escucha el MP3 completo antes de enviarlo!</li>
+            </ol>
+        </div>
+
+        <div class="tip warning-tip">
+            <strong>⚠️ Importante:</strong> Recuerda que <strong>File → Save Project</strong> guarda el proyecto de Audacity (formato .aup3), pero NO crea un MP3. Para entregar tu podcast, siempre necesitas usar <strong>Export as MP3</strong>.
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- RESOURCES -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="phase" style="border-top-color: var(--mint);">
+        <div class="phase-header">
+            <div class="phase-number">📚</div>
+            <div class="phase-title-group">
+                <h3>Recursos y referencias</h3>
+            </div>
+        </div>
+
+        <p>Los capítulos del libro <em>Tools for Podcasting</em> (OER) que cubren los temas de hoy:</p>
+
+        <div style="margin: 15px 0;">
+            <a href="https://pressbooks.pub/toolsforpodcasting/" class="resource-link" target="_blank">📖 Tools for Podcasting (OER completo)</a>
+            <a href="https://youtu.be/CFVrFHTkAGo" class="resource-link alt" target="_blank">🎬 Tutorial Audacity (Video)</a>
+        </div>
+
+        <table class="vocab-table">
+            <tbody><tr>
+                <th>Capítulo</th>
+                <th>Tema</th>
+                <th>Relevancia para hoy</th>
+            </tr>
+            <tr>
+                <td>Cap. 3</td>
+                <td>Microphones, Recorders, Filters</td>
+                <td>Tipos de micrófonos, filtros anti-pop, auriculares</td>
+            </tr>
+            <tr>
+                <td>Cap. 4</td>
+                <td>Best Practices for Recording</td>
+                <td>Buenas vs. malas grabaciones, calidad de sonido</td>
+            </tr>
+            <tr>
+                <td>Cap. 7</td>
+                <td>Voicing Tips &amp; Exercises</td>
+                <td>Evitar plosivas, ritmo vocal, inflección</td>
+            </tr>
+            <tr>
+                <td>Cap. 8</td>
+                <td>Editing Software &amp; Audiograms</td>
+                <td>Tutorial completo de Audacity</td>
+            </tr>
+        </tbody></table>
+
+        <div class="tip">
+            <strong>📎 Atajos de teclado esenciales de Audacity:</strong><br>
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">Ctrl+Z</code> Deshacer &nbsp;|&nbsp;
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">Space</code> Play/Pausa &nbsp;|&nbsp;
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">R</code> Grabar &nbsp;|&nbsp;
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">Delete</code> Borrar selección &nbsp;|&nbsp;
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">Ctrl+S</code> Guardar &nbsp;|&nbsp;
+            <code style="background: white; padding: 2px 6px; border-radius: 3px;">Ctrl+Shift+E</code> Exportar
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TAREA -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="tarea">
+        <h3>📝 Tarea para la próxima clase</h3>
+        <p>Antes de la próxima sesión del taller (V-T Session 2), completa lo siguiente:</p>
+        <ul>
+            <li><strong>Lee</strong> los Capítulos 3 y 4 del libro <a href="https://pressbooks.pub/toolsforpodcasting/" target="_blank">Tools for Podcasting</a>.</li>
+            <li><strong>Practica</strong> en Audacity: graba 2 minutos hablando sobre tu tema del podcast y edita los errores.</li>
+            <li><strong>Reúnete</strong> con tu grupo de podcast y definan: tema, estructura del episodio, y quién habla en cada segmento.</li>
+            <li><strong>Busca</strong> música libre de derechos para la introducción de tu podcast y descárgala.</li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+</body></html>
